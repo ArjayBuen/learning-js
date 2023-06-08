@@ -33,4 +33,71 @@ console.log(Array.isArray(fruits));
 console.log(fruits.indexOf('Manga'));
 
 //object literals
+const tao={
+    firstName: 'Pedro',
+    lastName: 'Penduko',
+    age: 35,
+    favorite: ['apple','blue','english','PinoyFreeCoder'],
+    familyMembers:{
+        father: 'Pedro Sr',
+        mother: 'Nenang Penduko',
+        sister: 'Nena Penduko'
+    }
+}
+console.log("Name: "+tao.firstName,tao.lastName);
+console.log(tao.familyMembers.sister);
 
+const Contact=[
+    {
+        id:1,
+        fullName: "Pedro Penduko",
+        isSaved:"Phone"
+    },
+    {
+        id:2,
+        fullName: "Pedro Penduko Sr",
+        isSaved:"Phone"
+    },
+    {
+        id:3,
+        fullName: "Nenang Penduko",
+        isSaved:"SD"
+    }
+]
+console.log(Contact)
+
+//loops
+const Contact2=[
+    {
+        id:1,
+        fullName: "Pedro Penduko",
+        isSaved:"Phone"
+    },
+    {
+        id:2,
+        fullName: "Pedro Penduko Sr",
+        isSaved:"Phone"
+    },
+    {
+        id:3,
+        fullName: "Nenang Penduko",
+        isSaved:"SD"
+    }
+]
+//for
+for(let i=0;i<=10; i++){
+    console.log(i);
+}
+//while
+let i=0;
+while(i<10){
+    console.log(`while loop any value ay ${i}`);
+    i++;
+}
+for (let index = 0; index < Contact2.length; index++) {
+    // const element = array[index];
+    console.log(Contact2[index].fullName);  
+}
+for(let contact2 of Contact2){
+    console.log(contact2);
+}
