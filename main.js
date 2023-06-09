@@ -98,6 +98,83 @@ for (let index = 0; index < Contact2.length; index++) {
     // const element = array[index];
     console.log(Contact2[index].fullName);  
 }
-for(let contact2 of Contact2){
+
+for(let contact2 of Contact2){ 
     console.log(contact2);
 }
+Contact2.forEach(function(contact){
+    console.log(contact);
+});
+
+const ContactsFullname = Contact2.map(function(contact){
+    return contact.fullName;
+});
+console.log(ContactsFullname);
+const ContactsPhone=Contact2.filter(function(contact){
+    return contact.isSaved=="Phone";
+});
+console.log(ContactsPhone);
+
+//JSON
+const ContactsJSON = JSON.stringify(Contact2);
+console.log(ContactsJSON);
+
+
+//conditionals - ==/!==/&&
+const x = 300;
+if(x === 100){//3 equal sign checks the value and data type
+   console.log("its 100");
+}else if(x>200){
+    console.log("value graeter than 100");
+}
+else{
+    console.log("not 100");
+}
+
+if(x===100||x>100){
+    console.log("true");
+}else{
+    console.log("false");
+}
+
+//function types
+// let z=100;
+// let y=200;
+function GetSum(z,y){
+    return z+y;
+}
+console.log(GetSum(200,200));
+
+const subtract=(a,b)=>{
+    return a - b;
+}
+console.log(subtract(200,100));
+
+//OOP -constructor funtion or class
+
+// function People(firstname,lastname,bt){
+//     this.firstname=firstname;
+//     this.lastname=lastname;;
+//     this.bt=bt;
+
+//     this.getFullName=()=>{
+//         return `${this.firstname} ${this.lastname}`;
+//     }
+// }
+
+
+class Tao{
+    constructor(firstname,lastname,bt){
+        this.firstname=firstname;
+        this.lastname=lastname;;
+        this.bt=bt;
+    }
+    getFullName(){
+        return `${this.firstname} ${this.lastname}`;
+    }
+}
+//instantiate object
+
+const tao1=new Tao('Pedro','Penduko','A');
+console.log(tao1);
+console.log(tao1.getFullName());
