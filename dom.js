@@ -18,7 +18,24 @@ const btn=document.querySelector("#btn");
 btn.style.background="blue";
 
 //DOM Events
-btn.addEventListener("click",function(e){
+btn.addEventListener("click", function(e){
     e.preventDefault();
-    console.log("Button Clicked");
-})
+    console.log(`Button Clicked!`);
+    // Form2.style.background="black"; applicable for dark mode
+} );
+
+//Form Validation
+const Username=document.querySelector("#username");
+const Password=document.querySelector("#password");
+const Msg=document.querySelector("#msg");
+btn.addEventListener("click", function(e){
+    e.preventDefault();
+    
+    if(Username.value.length===0||Password.value.length===0){
+        Msg.innerHTML=`<h4 class="error">Please complete details</h4>`;
+        setTimeout(()=>document.querySelector(".error").remove(),3000);
+    }else{
+        console.log("Both have value");
+        Form2.submit();
+    }
+} );
